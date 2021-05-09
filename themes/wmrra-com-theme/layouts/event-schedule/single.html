@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div data-debug="{{ .Params }}" class="content-wrapper">
+    <h1 class="big-red-header">{{ .Params.title }}</h1>
+
+    {{ if .Params.headerImage}}
+      <div class="header-image-wrapper">
+        <img src="{{ .Params.headerImage }}" />
+      </div>
+    {{ end }}
+  
+    <div class="event-schedule">{{ .Content }}</div>
+  </div>
+{{ end }}
